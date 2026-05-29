@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!--
+        The displayed count.
+        It is intentionally large so rotation tests are easy to see.
+    -->
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="@string/count_initial"
+        android:textColor="@color/text_primary"
+        android:textSize="80sp"
+        android:textStyle="bold" />
+
+    <!-- Main-thread LiveData update through setValue(). -->
+    <Button
+        android:id="@+id/btnIncrement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/increment" />
+
+    <Button
+        android:id="@+id/btnDecrement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/decrement" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reset" />
+
+    <!-- Background-thread LiveData update through postValue(). -->
+    <Button
+        android:id="@+id/btnBackgroundIncrement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/background_increment" />
+
+</LinearLayout>

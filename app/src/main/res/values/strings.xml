@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ViewModelLiveDataDemoEnrichi</string>
+    <string name="count_initial">0</string>
+    <string name="increment">INCREMENTER</string>
+    <string name="decrement">DECREMENTER</string>
+    <string name="reset">REINITIALISER</string>
+    <string name="background_increment">+1 DEPUIS THREAD BACKGROUND</string>
+</resources>

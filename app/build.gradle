@@ -1,0 +1,42 @@
+apply plugin: "com.android.application"
+
+android {
+    namespace "com.example.viewmodellivedatademoenrichi"
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.viewmodellivedatademoenrichi"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    /*
+     * AndroidX Lifecycle 2.10.0 is the stable Lifecycle release listed by
+     * the current AndroidX release notes.
+     *
+     * lifecycle-viewmodel:
+     *   Gives us ViewModel and ViewModelProvider.
+     *
+     * lifecycle-livedata:
+     *   Gives us LiveData, MutableLiveData, and Observer.
+     *
+     * lifecycle-viewmodel-savedstate:
+     *   Gives us SavedStateHandle, used here to survive process death too.
+     */
+    def lifecycle_version = "2.10.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+
+    /*
+     * ComponentActivity is a small modern Activity base class.
+     * It is enough for this lab because we do not need AppCompat features.
+     * It already implements LifecycleOwner, ViewModelStoreOwner, and
+     * SavedStateRegistryOwner, which are exactly what ViewModel needs.
+     */
+    implementation "androidx.activity:activity:1.13.0"
+}

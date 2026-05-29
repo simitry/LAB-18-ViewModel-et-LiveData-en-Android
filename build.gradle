@@ -1,0 +1,15 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:9.0.1"
+    }
+}
+
+plugins {
+    // Root project intentionally stays empty.
+    // The Android application plugin is applied only in app/build.gradle.
+}
